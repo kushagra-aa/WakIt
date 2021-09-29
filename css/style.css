@@ -308,4 +308,9 @@ footer {
   letter-spacing: 0.14em;
   color: #fe7b1d;
 }
+
+.for-load {
+  display: none;
+  pointer-events: none;
+}
 /*# sourceMappingURL=style.css.map */

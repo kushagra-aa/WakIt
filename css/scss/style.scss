@@ -100,3 +100,8 @@ footer {
   letter-spacing: 0.14em;
   color: map-get($root, accent);
 }
+
+.for-load {
+  display: none;
+  pointer-events: none;
+}

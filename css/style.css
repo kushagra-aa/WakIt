@@ -1,22 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap");
+.game-window {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 1254px;
+  height: 774px;
+  background: #984b5a;
+  -webkit-box-shadow: 1px 1px 15px 2px rgba(144, 97, 113, 0.4);
+          box-shadow: 1px 1px 15px 2px rgba(144, 97, 113, 0.4);
+  border-radius: 53px;
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+  margin: 22px 0px;
+}
+
+.game-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 1254px;
+  height: 657px;
+}
+
+.score,
+.high-score {
+  width: 334px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-size: 31px;
+  line-height: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  letter-spacing: 0.085em;
+  text-transform: capitalize;
+  color: #fe7b1d;
+}
+
+.holes {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5rem;
+  justify-items: center;
+}
+
+.hole {
+  position: relative;
+  overflow: hidden;
+  background-image: url("../../assets/hole.png");
+  width: 120px;
+  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+}
+
+.game-btm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 1254px;
+  height: 117px;
+}
+
+.btn-pri1-sec {
+  height: 55.6px;
+  width: 313px;
+  background: #ff8f57;
+  color: #5a3d47;
+  border-radius: 66px;
+  border: none;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 31px;
+  line-height: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.dis-btn {
+  display: none;
+}
+
+.mole {
+  position: absolute;
+  bottom: -5px;
+  z-index: 1;
+  height: 100px;
+  -webkit-animation: appear 0.3s linear;
+          animation: appear 0.3s linear;
+  pointer-events: none;
+}
+
 ::-moz-selection {
-  color: var(--primary2);
-  background: var(--accent);
+  color: #5a3d47;
+  background: #fe7b1d;
 }
 
 ::selection {
-  color: var(--primary2);
-  background: var(--accent);
+  color: #5a3d47;
+  background: #fe7b1d;
 }
 
 /* Code for Firefox */
 ::-moz-selection {
-  color: var(--primary2);
-  background: var(--accent);
+  color: #5a3d47;
+  background: #fe7b1d;
 }
 
 * {
   padding: 0px;
   margin: 0px;
-  color: var(--primary3);
+}
+
+body {
+  background: #ff8f57;
+}
+
+.cursor img {
+  position: absolute;
+  height: 125px;
+  z-index: 2;
+  -webkit-transform: translate(-10px, -40px);
+          transform: translate(-10px, -40px);
+  pointer-events: none;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 19px 93px;
+}
+
+.logo-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px;
+  color: #5a3d47;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.245em;
+  text-transform: capitalize;
+}
+
+.title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 100%;
+}
+
+.logo-area img {
+  width: 60px;
+}
+
+footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 38px;
+  background: #5a3d47;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.center,
+.right {
+  color: #fe7b1d;
+  height: 20px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  letter-spacing: 0.14em;
+  text-transform: capitalize;
+}
+
+.right {
+  position: absolute;
+  right: 20px;
+}
+
+.right a {
+  text-transform: none;
+  letter-spacing: 0.14em;
+  color: #fe7b1d;
 }
 /*# sourceMappingURL=style.css.map */

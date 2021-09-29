@@ -1,0 +1,89 @@
+.game-window {
+  display: flex;
+  flex-direction: column;
+  width: 1254px;
+  height: 774px;
+  background: map-get($root, primary3);
+  box-shadow: 1px 1px 15px 2px rgba(#906171, 0.4);
+  border-radius: 53px;
+  order: 0;
+  margin: 22px 0px;
+}
+.game-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1254px;
+  height: 657px;
+}
+
+.score,
+.high-score {
+  width: 334px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-size: 31px;
+  line-height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: 0.085em;
+  text-transform: capitalize;
+  color: map-get($root, accent);
+}
+
+.holes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5rem;
+  justify-items: center;
+}
+.hole {
+  position: relative;
+  overflow: hidden;
+  background-image: url("../../assets/hole.png");
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border-radius: 50%;
+}
+.game-btm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1254px;
+  height: 117px;
+}
+.btn-pri1-sec {
+  height: 55.6px;
+  width: 313px;
+  background: map-get($root, primary1);
+  color: map-get($root, secondary);
+  border-radius: 66px;
+  border: none;
+  //   font styles
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 31px;
+  line-height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-transform: capitalize;
+}
+.dis-btn {
+  display: none;
+}
+.mole {
+  position: absolute;
+  bottom: -5px;
+  z-index: 1;
+  height: 100px;
+  animation: appear 0.3s linear;
+  pointer-events: none;
+}

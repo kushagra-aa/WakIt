@@ -1,15 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap");
 @import "colors";
+@import "game-window";
 ::selection {
-  color: var(--primary2);
-  background: var(--accent);
+  color: map-get($root, secondary);
+  background: map-get($root, accent);
 }
 /* Code for Firefox */
 ::-moz-selection {
-  color: var(--primary2);
-  background: var(--accent);
+  color: map-get($root, secondary);
+  background: map-get($root, accent);
 }
 * {
   padding: 0px;
   margin: 0px;
-  color: var(--primary3);
+  color: map-get($root, varname);
+}
+body {
+  background: map-get($root, primary1);
+}
+
+// cursor styles
+.cursor img {
+  position: absolute;
+  height: 125px;
+  z-index: 2;
+  transform: translate(-10px, -40px);
+  pointer-events: none;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 19px 93px;
+}
+
+.logo-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  color: map-get($root, secondary);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.245em;
+  text-transform: capitalize;
+}
+.title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 100%;
+}
+.logo-area img {
+  width: 60px;
+}
+// footer styles
+footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 38px;
+  background: map-get($root, secondary);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center,
+.right {
+  color: map-get($root, accent);
+  height: 20px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 100%;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.14em;
+  text-transform: capitalize;
+}
+
+.right {
+  position: absolute;
+  right: 20px;
+}
+.right a {
+  text-transform: none;
+  letter-spacing: 0.14em;
+  color: map-get($root, accent);
 }

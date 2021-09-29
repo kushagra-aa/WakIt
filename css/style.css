@@ -135,6 +135,46 @@
   pointer-events: none;
 }
 
+@-webkit-keyframes hit {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
+}
+
+@keyframes hit {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
+}
+
+@-webkit-keyframes appear {
+  from {
+    bottom: -60px;
+  }
+  to {
+    bottom: 0px;
+  }
+}
+
+@keyframes appear {
+  from {
+    bottom: -60px;
+  }
+  to {
+    bottom: 0px;
+  }
+}
+
 ::-moz-selection {
   color: #5a3d47;
   background: #fe7b1d;

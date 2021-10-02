@@ -67,7 +67,7 @@
 .hole {
   position: relative;
   overflow: hidden;
-  background-image: url("../../assets/hole.png");
+  background-image: url("../assets/hole.png");
   width: 120px;
   height: 120px;
   display: -webkit-box;

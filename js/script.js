@@ -5,7 +5,7 @@ const playBtn = document.querySelector(".play-btn")
 const stopBtn = document.querySelector(".stop-btn")
 const holes = document.querySelectorAll(".hole")
 const img = document.createElement("img")
-img.setAttribute("src", "./assets/mole")
+img.setAttribute("src", "assets/mole.png")
 img.setAttribute("class", "mole")
 // cursor img logic using window EventListener
 window.addEventListener("mousemove", (e) => {

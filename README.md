@@ -36,5 +36,5 @@ Built with 🤍 For You!
   - etc
 
 ## Screenshots
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![ScreenShot](https://user-images.githubusercontent.com/68841296/135712217-5fafc8f3-c9cd-4d12-85b5-f16bf123295f.png)
+![ScreenShot](https://user-images.githubusercontent.com/68841296/135712220-845ecfdb-66a0-4545-b2d5-4b2cb0ef3e7c.png)

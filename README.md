@@ -47,4 +47,5 @@ Built with 🤍 For You!
 ## Screenshots
 
 ![ScreenShot](https://user-images.githubusercontent.com/68841296/135712217-5fafc8f3-c9cd-4d12-85b5-f16bf123295f.png)
-![ScreenShot](https://user-images.githubusercontent.com/68841296/135712220-845ecfdb-66a0-4545-b2d5-4b2cb0ef3e7c.png)
+![image](https://user-images.githubusercontent.com/68841296/135713261-1eb43eec-8105-4317-a4b4-82e9a7732438.png)
+

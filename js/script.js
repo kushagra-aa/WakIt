@@ -10,10 +10,28 @@ var hole = 0;
 var difficulty;
 var speed = 900;
 var points = 0;
-var highPoints = 0;
+var highPoints = localStorage.getItem("highScore");
 var gameOn = false;
 var game;
 // making the functions for game
+const started = (e) => {
+    console.log("HREYY")
+    // disabling playBtn
+    playBtn.classList.add("dis-btn")
+    // enabling stopBtn
+    stopBtn.classList.remove("dis-btn")
+    // starting the game
+    gameOn = true
+    game = setInterval(startGame, speed)
+}
+const stopped = (e) => {
+    // disabling stopBtn
+    stopBtn.classList.add("dis-btn")
+    // enabling playBtn
+    playBtn.classList.remove("dis-btn")
+    // stopping the game
+    stopGame()
+}
 function startGame() {
     let randomNo = Math.floor(Math.random() * 9)
     hole = holes[randomNo]
@@ -27,8 +45,6 @@ function stopGame() {
     addHigh()
     // resetting the highscore
     points = -1
-    console.log(points)
-    console.log(highPoints)
     // adding points to html
     addpoints()
 }
@@ -68,23 +84,20 @@ window.addEventListener("mousemove", (e) => {
     })
 })
 // addng event listener to playBtn
-playBtn.addEventListener('click', () => {
-    // disabling playBtn
-    playBtn.classList.add("dis-btn")
-    // enabling stopBtn
-    stopBtn.classList.remove("dis-btn")
-    // starting the game
-    gameOn = true
-    game = setInterval(startGame, speed)
-})
+playBtn.addEventListener('click', () => { started() })
 // addng event listener to stopBtn
-stopBtn.addEventListener('click', () => {
-    // disabling stopBtn
-    stopBtn.classList.add("dis-btn")
-    // enabling playBtn
-    playBtn.classList.remove("dis-btn")
-    // stopping the game
-    stopGame()
-})
+stopBtn.addEventListener('click', () => { stopped() })
 // showing scores on load 
 window.onload = () => { highScore.innerText = localStorage.getItem('highScore') }
+// start and stop on space press
+document.addEventListener('keyup', event => {
+    if (event.code === 'Space') {
+        console.log("space pressed")
+        if (gameOn) {
+            stopped()
+        }
+        else {
+            started()
+        }
+    }
+})

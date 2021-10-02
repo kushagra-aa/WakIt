@@ -1,0 +1,9 @@
+// variables-width
+$mobile: 430px;
+
+// functions
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}

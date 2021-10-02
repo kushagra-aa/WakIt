@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap");
 @import "colors";
+@import "resp";
 @import "game-window";
 @import "animations";
 ::selection {
@@ -23,6 +24,9 @@
 }
 body {
   background: map-get($root, primary1);
+  @include mobile {
+    width: 100vw;
+  }
 }
 a {
   cursor: pointer;
@@ -34,6 +38,9 @@ a {
   z-index: 2;
   transform: translate(-20px, -60px);
   pointer-events: none;
+  @include mobile {
+    height: 120px;
+  }
 }
 
 .main {
@@ -42,6 +49,10 @@ a {
   justify-content: center;
   align-items: center;
   padding: 19px 93px;
+  @include mobile {
+    width: 100vw;
+    padding: 5px 0px;
+  }
 }
 
 .logo-area {
@@ -63,9 +74,16 @@ a {
   font-weight: 500;
   font-size: 50px;
   line-height: 100%;
+  @include mobile {
+    font-size: 40px;
+  }
 }
 .logo-area img {
   width: 60px;
+  @include mobile {
+    height: 85px;
+    width: 85px;
+  }
 }
 // footer styles
 footer {
@@ -79,6 +97,10 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  @include mobile {
+    height: 52px;
+    flex-direction: column;
+  }
 }
 
 .center,
@@ -96,19 +118,22 @@ footer {
   text-align: center;
   letter-spacing: 0.14em;
   text-transform: capitalize;
+  @include mobile {
+    font-size: 20px;
+  }
 }
 
 .right {
   position: absolute;
   right: 20px;
+  @include mobile {
+    margin-top: 0.3em;
+    position: relative;
+    right: 0;
+  }
 }
 .right a {
   text-transform: none;
   letter-spacing: 0.14em;
   color: map-get($root, accent);
-}
-
-.for-load {
-  display: none;
-  pointer-events: none;
 }

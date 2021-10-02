@@ -8,6 +8,10 @@
   border-radius: 53px;
   order: 0;
   margin: 22px 0px;
+  @include mobile {
+    width: 360px;
+    height: 665px;
+  }
 }
 .game-top {
   display: flex;
@@ -15,6 +19,12 @@
   align-items: center;
   width: 1254px;
   height: 657px;
+  @include mobile {
+    flex-direction: column;
+    width: 360px;
+    height: 665px;
+    justify-content: space-evenly;
+  }
 }
 
 .score,
@@ -32,12 +42,27 @@
   text-transform: capitalize;
   color: map-get($root, accent);
 }
-
+.high-score {
+  @include mobile {
+    order: 1;
+  }
+}
+.score {
+  @include mobile {
+    order: 2;
+  }
+}
 .holes {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 5rem;
   justify-items: center;
+  @include mobile {
+    order: 3;
+    width: 321px;
+    height: 423px;
+    grid-gap: 3rem;
+  }
 }
 .hole {
   position: relative;
@@ -49,6 +74,11 @@
   align-items: flex-end;
   justify-content: center;
   border-radius: 50%;
+  @include mobile {
+    width: 68.77px;
+    height: 68.77px;
+    background-size: 68.77px;
+  }
 }
 .game-btm {
   display: flex;
@@ -56,6 +86,13 @@
   justify-content: center;
   width: 1254px;
   height: 117px;
+  @include mobile {
+    flex-direction: column;
+    width: 360px;
+    height: 100px;
+
+    justify-content: space-evenly;
+  }
 }
 .btn-pri1-sec {
   height: 55.6px;
@@ -90,4 +127,7 @@
   height: 100px;
   animation: appear 0.3s linear;
   pointer-events: none;
+  @include mobile {
+    height: 55px;
+  }
 }

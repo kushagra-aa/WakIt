@@ -7,6 +7,9 @@ Made using vanilla JavaScript
 
 Built with 🤍 For You!
 
+<a href="https://kushagra-aa.github.io/WakIt/">![image](https://user-images.githubusercontent.com/68841296/135712331-a595d2b9-1728-424d-b2ae-669a361c83cf.png)
+</a>
+
 ## 🔗 Links
 
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://kushagra-aa.github.io/portfolio/)

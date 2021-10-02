@@ -11,21 +11,28 @@
   color: map-get($root, secondary);
   background: map-get($root, accent);
 }
+// scrollbar styles
+::-webkit-scrollbar {
+  display: none;
+}
 * {
   padding: 0px;
   margin: 0px;
   color: map-get($root, varname);
+  cursor: none;
 }
 body {
   background: map-get($root, primary1);
 }
-
+a {
+  cursor: pointer;
+}
 // cursor styles
 .cursor img {
   position: absolute;
   height: 125px;
   z-index: 2;
-  transform: translate(-10px, -40px);
+  transform: translate(-20px, -60px);
   pointer-events: none;
 }
 
@@ -68,7 +75,7 @@ footer {
   width: 100%;
   height: 38px;
   background: map-get($root, secondary);
-
+  z-index: 3;
   display: flex;
   justify-content: center;
   align-items: center;

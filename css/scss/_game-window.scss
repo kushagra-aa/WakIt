@@ -8,6 +8,15 @@
   border-radius: 53px;
   order: 0;
   margin: 22px 0px;
+  @include lap {
+    width: 1175px;
+    height: 774px;
+  }
+  @include tab {
+    width: 797px;
+    height: 935px;
+    padding: 2rem 0px;
+  }
   @include mobile {
     width: 360px;
     height: 665px;
@@ -19,11 +28,19 @@
   align-items: center;
   width: 1254px;
   height: 657px;
-  @include mobile {
+  @include lap {
+    width: 1175px;
+    height: 774px;
+  }
+  @include tab {
+    width: 797px;
+
     flex-direction: column;
+    justify-content: space-evenly;
+  }
+  @include mobile {
     width: 360px;
     height: 665px;
-    justify-content: space-evenly;
   }
 }
 
@@ -43,12 +60,12 @@
   color: map-get($root, accent);
 }
 .high-score {
-  @include mobile {
+  @include tab {
     order: 1;
   }
 }
 .score {
-  @include mobile {
+  @include tab {
     order: 2;
   }
 }
@@ -57,8 +74,12 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 5rem;
   justify-items: center;
-  @include mobile {
+  @include tab {
     order: 3;
+    height: 560px;
+    width: 616px;
+  }
+  @include mobile {
     width: 321px;
     height: 423px;
     grid-gap: 3rem;
@@ -86,6 +107,9 @@
   justify-content: center;
   width: 1254px;
   height: 117px;
+  @include tab {
+    width: 797px;
+  }
   @include mobile {
     flex-direction: column;
     width: 360px;

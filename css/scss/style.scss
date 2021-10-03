@@ -24,7 +24,8 @@
 }
 body {
   background: map-get($root, primary1);
-  @include mobile {
+  min-height: 100vh;
+  @include lap {
     width: 100vw;
   }
 }
@@ -49,8 +50,14 @@ a {
   justify-content: center;
   align-items: center;
   padding: 19px 93px;
+  width: 100vw;
+  @include lap {
+    padding: 15px 80px;
+  }
+  @include tab {
+    padding: 10px 70px;
+  }
   @include mobile {
-    width: 100vw;
     padding: 5px 0px;
   }
 }
@@ -80,6 +87,10 @@ a {
 }
 .logo-area img {
   width: 60px;
+  @include lap {
+    height: 95px;
+    width: 95px;
+  }
   @include mobile {
     height: 85px;
     width: 85px;
@@ -97,6 +108,12 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  @include lap {
+    width: 100vw;
+  }
+  @include tab {
+    justify-content: space-between;
+  }
   @include mobile {
     height: 52px;
     flex-direction: column;
@@ -126,10 +143,12 @@ footer {
 .right {
   position: absolute;
   right: 20px;
-  @include mobile {
-    margin-top: 0.3em;
+  @include tab {
     position: relative;
     right: 0;
+  }
+  @include mobile {
+    margin-top: 0.3em;
   }
 }
 .right a {

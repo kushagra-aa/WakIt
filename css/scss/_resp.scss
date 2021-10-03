@@ -1,9 +1,21 @@
 // variables-width
 $mobile: 430px;
+$lap: 1224px;
+$tab: 768px;
 
 // functions
 @mixin mobile {
   @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+@mixin lap {
+  @media (max-width: #{$lap}) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: #{$tab}) {
     @content;
   }
 }
